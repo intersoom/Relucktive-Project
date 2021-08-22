@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'spring';
+    src: url('./HS봄바람체2.0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body, .wrap{
+    width: 100vw; height: 100vh;
+    background-color: #FCFAF7;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'spring';
+}
+
+.clover{
+    width: 95vw; height: 90vh;
+    border: solid 12px #28680E;
+    background-color: #FCFAF7;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.titleWrap{
+    height: 70%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleTextWrap{
+    height: 160px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.title{
+    display: inline;
+    vertical-align: text-bottom;
+}
+
+.title.smallText{
+    font-size: 115px;
+    color: #E0CFAD;
+
+    padding-bottom: 5px;
+}
+
+.title.bigText{
+    font-size: 153px;
+    color: #EAB642;
+}
+
+.toggleBtnWrap{
+    height: 30%;
+}

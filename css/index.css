@@ -60,3 +60,17 @@ html, body, .wrap{
 .toggleBtnWrap{
     height: 30%;
 }
+
+.backgroundBtn{
+    position: relative;
+    height: 109px; width: 468px;
+    margin: 0 auto;
+    background: url('../img/backBtn.png') no-repeat;
+}
+
+.luckyBtn{
+    position: absolute;
+    width: 270px; height: 109px;
+    background-image: url('../img/luckyBtn.png');
+    top: 0;
+}

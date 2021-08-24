@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="wrap">
-        <div class="clover">
+        <div class="clover cloverChangeOne">
             <div class="titleWrap">
                 <div class="titleTextWrap">
                     <span class="title smallText">Re</span>
@@ -22,12 +22,51 @@
             </div>
             <div class="toggleBtnWrap">
                 <div class="toggleBtn backgroundBtn">
-                    <div class="toggleBtn luckyBtn"></div>
-                    <div class="toggleBtn unluckyBtn"></div>
+                    <div class="toggleBtn insideBtn luckyBtn"></div>
+                    <!-- <div class="toggleBtn unluckyBtn"></div> -->
                 </div>
             </div>
             <div class="nextBtn">next ></div>
         </div>
     </div>
+
+    <script>
+            const insideBtn = document.querySelector('.insideBtn')
+            const luckyBtn = document.querySelector('.luckyBtn');
+            const unluckyBtn = document.querySelector('.unluckyBtn');
+
+            const cloverChange = document.querySelector('.clover')
+
+            const changeLucky=()=>{
+                luckyBtn.classList.remove('unluckyBtn');
+                luckyBtn.classList.add('luckyBtn');
+                luckyBtn.classList.add('transformLeft');
+            }
+
+            const changeUnlucky=()=>{
+                luckyBtn.classList.remove('luckyBtn');
+                luckyBtn.classList.add('unluckyBtn');
+                luckyBtn.classList.add('transformright');
+    
+            }
+
+            let toggle = false;
+
+            insideBtn.addEventListener('click', function(){
+
+                toggle = !toggle;
+
+                if(toggle == true)
+                    changeUnlucky();
+                    //정보 넘길 것 추가하기
+                else
+                    changeLucky();
+                    //정보 넘길 것 추가하기
+            });
+
+        
+            
+        
+    </script>
 </body>
 </html>

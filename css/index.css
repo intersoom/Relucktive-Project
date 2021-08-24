@@ -19,7 +19,6 @@ html, body, .wrap{
 .clover{
     width: 95vw; height: 90vh;
     border: solid 12px #28680E;
-    background-color: #FCFAF7;
 
     display: flex;
     flex-direction: column;
@@ -63,7 +62,7 @@ html, body, .wrap{
 
 .backgroundBtn{
     position: relative;
-    height: 109px; width: 468px;
+    width: 468px; height: 109px; 
     margin: 0 auto;
     background: url('../img/backBtn.png') no-repeat;
 }
@@ -73,4 +72,16 @@ html, body, .wrap{
     width: 270px; height: 109px;
     background-image: url('../img/luckyBtn.png');
     top: 0;
+    transition: 0.5s;
 }
+
+.unluckyBtn{
+    position: absolute;
+    width: 270px; height: 109px;
+    background-image: url('../img/unluckyBtn.png');
+    top: 0;
+    transform: translateX(198px);
+    transition: 0.5s;
+}
+
+

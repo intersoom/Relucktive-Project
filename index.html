@@ -12,42 +12,58 @@
 </head>
 <body>
     <div class="wrap">
-        <div class="clover cloverChangeOne">
+        <div class="designWrap">
+            <div class="moveCircle"></div>
+            <div class="moveCircle"></div>
+            <div class="figureWrap">
+                <div class="rectangle"></div>
+                <div class="circle">
+                    <div class="cloverImg"></div>
+                </div>
+            </div>
+        </div>
+        <div class="clover cloverChangeOne"> 
             <div class="titleWrap">
                 <div class="titleTextWrap">
-                    <div class="title smallText">Re</div>
-                    <div class="title bigText">Luck</div>
-                    <div class="title smallText">tive</div>
+                    <div class="title fullText">Re</div>
+                    <div class="title lineText">Luck</div>
+                    <div class="title fullText">tive</div>
+                </div>
+                <div class="line"></div>
+                <div class="toggleBtnWrap">
+                    <div class="toggleBtn backgroundBtn">
+                        <div class="toggleBtn insideBtn luckyBtn"></div>
+                        <!-- <div class="toggleBtn unluckyBtn"></div> -->
+                    </div>
                 </div>
             </div>
-            <div class="toggleBtnWrap">
-                <div class="toggleBtn backgroundBtn">
-                    <div class="toggleBtn insideBtn luckyBtn"></div>
-                    <!-- <div class="toggleBtn unluckyBtn"></div> -->
-                </div>
-            </div>
-            <div class="nextBtn">next ></div>
+            <button class="nextBtn" onclick="nextOnclick()">next ></button>
         </div>
+        
     </div>
 
     <script>
             const insideBtn = document.querySelector('.insideBtn')
             const luckyBtn = document.querySelector('.luckyBtn');
+            luckyBtn.innerHTML = 'Lucky';
             const unluckyBtn = document.querySelector('.unluckyBtn');
-
             const cloverChange = document.querySelector('.clover')
+            let currentStatus ='lucky';
 
             const changeLucky=()=>{
                 luckyBtn.classList.remove('unluckyBtn');
                 luckyBtn.classList.add('luckyBtn');
+                luckyBtn.innerHTML = 'Lucky';
                 luckyBtn.classList.add('transformLeft');
+                currentStatus = 'lucky';
             }
 
             const changeUnlucky=()=>{
                 luckyBtn.classList.remove('luckyBtn');
                 luckyBtn.classList.add('unluckyBtn');
+                luckyBtn.innerHTML = 'UnLucky';
                 luckyBtn.classList.add('transformright');
-    
+                currentStatus = 'unlucky';
             }
 
             let toggle = false;
@@ -64,7 +80,15 @@
                     //정보 넘길 것 추가하기
             });
 
-        
+            const nextOnclick=()=>{
+                if (currentStatus == 'lucky'){
+                    location.href = "./lucky.html"
+                } 
+                
+                else if (currentStatus == 'unlucky'){
+                    location.href = "./unlucky.html"
+                }
+            }
             
         
     </script>

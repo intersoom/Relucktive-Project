@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'spring';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSBombaram.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'spring';
+}
+
+.wrap{
+    width: 100vw; height: 100vh;
+    background: url(../img/cloverBG.png) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.border{
+    width: 93vw; height: 90vh;
+    background-color: transparent;
+    border: 15px solid rgb(40, 104, 14, 0.2);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: 'spring';
+    overflow: hidden;
+}
+
+@keyframes text-ani{
+    from{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.textWrap{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainText{
+    align-self: center;
+    font-size: 35px;
+    color: #5C5139;
+    line-height: 45px;
+    text-align: center;
+    animation: text-ani 1s ease-in-out forwards;
+}
+
+.subWrap{
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    height: 100px;
+    margin-top: 30px;
+    animation: text-ani 1s ease-in-out forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+.subText{
+    font-size: 25px;
+    color: #5C5139;
+    line-height: 30px;
+    text-align: center;
+}
+
+.subImg{
+    width: 70px; height: 94px;
+    background: url('../img/cloverSmall.png');
+    background-size: cover;
+    position: relative;
+    left: -40px;
+    top: -10px;
+}
+
+.nextBtn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    font-size: 30px;
+    color: #EAB642;
+    
+    border: none;
+    background-color: transparent;
+}
+
+.nextBtn:hover{
+    opacity: 0.5;
+    transition: 0.5s;
+    cursor: pointer;
+}
